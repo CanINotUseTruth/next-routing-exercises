@@ -1,11 +1,18 @@
 import React from 'react';
 
+import ToastProvider from '../../../components/ToastProvider';
 import './styles.css';
+
+export const metadata = {
+  title: 'Contact Page',
+};
 
 function FlashMsgLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ToastProvider>{children}</ToastProvider>
+      </body>
     </html>
   );
 }
